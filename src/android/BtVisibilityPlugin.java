@@ -15,6 +15,7 @@ import android.net.wifi.WifiManager;
 
 import android.bluetooth.BluetoothAdapter;
 import android.util.Log;
+import android.content.Intent;
 
 /**
  * The Class MacAddressPlugin.
