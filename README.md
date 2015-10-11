@@ -1,0 +1,2 @@
+# BtVisibilityPlugin
+Bluetooth Visibility Plugin
