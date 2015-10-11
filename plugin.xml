@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="com-badrit-macaddress"
+  version="0.2.0">
+  <name>MacAddress</name>
+  <description>Cordova Bluetooth Visibility Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,bluetooth</keywords>
+
+
+  <js-module src="www/BtUtilities.js" name="BtUtilities">
+    <clobbers target="window.BtUtilities" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="BtVisibilityPlugin">
+        <param name="android-package" value="com.joshy.MacAddress.BtVisibilityPlugin"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.BLUETOOTH" />
+    </config-file>
+
+    <source-file src="src/android/BtVisibilityPlugin.java" target-dir="src/com/badrit/MacAddress/" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+   <config-file target="config.xml" parent="/*">
+     <feature name="BtVisibilityPlugin">
+       <param name="ios-package" value="BtVisibilityPlugin" />
+     </feature>
+   </config-file>
+
+   <header-file src="src/ios/BtVisibilityPlugin.h" />
+   <source-file src="src/ios/BtVisibilityPlugin.m" />
+ </platform>
+
+</plugin>
