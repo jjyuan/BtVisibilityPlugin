@@ -4,7 +4,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="com-badrit-macaddress"
   version="0.2.0">
-  <name>MacAddress</name>
+  <name>Bluetooth visibility plug in</name>
   <description>Cordova Bluetooth Visibility Plugin</description>
   <license>Apache 2.0</license>
   <keywords>cordova,bluetooth</keywords>
@@ -18,7 +18,7 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="BtVisibilityPlugin">
-        <param name="android-package" value="com.joshy.MacAddress.BtVisibilityPlugin"/>
+        <param name="android-package" value="org.apache.cordova.plugin"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
