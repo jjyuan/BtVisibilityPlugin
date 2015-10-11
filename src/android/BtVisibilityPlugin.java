@@ -123,10 +123,10 @@ public class BtVisibilityPlugin extends CordovaPlugin {
             } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                 //discovery finishes, dismis progress dialog
             } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
-                //bluetooth device found
-                BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                // //bluetooth device found
+                // BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
-                showToast("Found device " + device.getName());
+                // showToast("Found device " + device.getName());
             }
         }
     };
