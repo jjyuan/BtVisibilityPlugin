@@ -1,7 +1,7 @@
 /*
 
 */
-package com.joshy.BtUtilities.BtUtilitiesPlugin;
+package com.joshy.BtVisibility.BtVisibilityPlugin;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -19,7 +19,7 @@ import android.util.Log;
 /**
  * The Class MacAddressPlugin.
  */
-public class BtUtilitiesPlugin extends CordovaPlugin {
+public class BtVisibilityPlugin extends CordovaPlugin {
 
     public boolean isSynch(String action) {
         if (action.equals("getMacAddress")) {

@@ -10,8 +10,8 @@
   <keywords>cordova,bluetooth</keywords>
 
 
-  <js-module src="www/BtUtilities.js" name="BtUtilities">
-    <clobbers target="window.BtUtilities" />
+  <js-module src="www/BtVisibility.js" name="BtVisibility">
+    <clobbers target="window.BtVisibility" />
   </js-module>
 
   <!-- android -->
