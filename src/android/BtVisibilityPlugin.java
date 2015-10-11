@@ -128,6 +128,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
 
     //             // showToast("Found device " + device.getName());
     //         }
-    //     }
+        // }
     // };
+    }
 }
