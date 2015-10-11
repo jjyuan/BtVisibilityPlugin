@@ -4,7 +4,6 @@
 package com.joshy.BtVisibility.BtVisibilityPlugin;
 
 
-import android.support.v7.app.AppCompatActivity;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
