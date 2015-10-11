@@ -83,7 +83,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
     private boolean enableBtVisibility( ) {
         Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE); //request user to turn on
         discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180); //extends it
-        this.context.startActivity(discoverableIntent); //does it
+        // this.context.startActivity(discoverableIntent); //does it
         
         return true;
     }
