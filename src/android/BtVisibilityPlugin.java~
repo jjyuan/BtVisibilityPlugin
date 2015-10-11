@@ -5,13 +5,13 @@ package com.joshy.BtVisibility.BtVisibilityPlugin;
 
 
 
-/*import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CallbackContext;
 
-import org.apache.cordova.PluginResult;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-*/
+//import org.apache.cordova.PluginResult;
+//import org.json.JSONArray;
+//import org.json.JSONException;
+//import org.json.JSONObject;
+
 import org.apache.cordova.CordovaPlugin;
 
 import android.content.Context;
@@ -35,6 +35,11 @@ import android.content.BroadcastReceiver;
  * The Class MacAddressPlugin.
  */
 public class BtVisibilityPlugin extends CordovaPlugin {
+
+	
+private static final String ACTION_REQUEST_DISCOVERABLE =   "requestDiscoverable";
+private final int REQUEST_CODE_DISCOVERABLE = 2;
+public CallbackContext callback_discoverable = null;
     // Context context;
     // public BtVisibilityPlugin(Context c)
     // {
@@ -96,6 +101,16 @@ public class BtVisibilityPlugin extends CordovaPlugin {
         
         // if(D) Log.d(TAG, "ensure discoverable");
         BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
+	Log.d("Topic" , "Message says that this is run!!!");
+	System.out.println("asdasdasda");
+	this.callback_discoverable = callbackContext;
+            Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            intent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180);
+            this.cordova.startActivityForResult(
+                    this, intent, this.REQUEST_CODE_DISCOVERABLE);
+                    
+	
+        //ba.startDiscovery();
         //     if (ba.getScanMode() !=
         //             ba.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
         //         Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
@@ -110,8 +125,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
         // filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
         // filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
         // registerReceiver(mReceiver, filter);
-	Log.d("Topic" , "Message says that this is run!!!");
-        ba.startDiscovery();
+	
 
 
 
