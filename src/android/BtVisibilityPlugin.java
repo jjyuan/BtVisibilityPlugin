@@ -20,6 +20,11 @@ import android.util.Log;
 import android.content.Intent;
 import android.app.Activity;
 
+
+import android.view.View;
+import android.view.Menu;
+import android.os.Bundle;
+
 /**
  * The Class MacAddressPlugin.
  */
@@ -73,7 +78,8 @@ public class BtVisibilityPlugin extends CordovaPlugin {
     private boolean enableBtVisibility( ) {
         Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE); //request user to turn on
         discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180); //extends it
-        startActivity(discoverableIntent); //does it
+        this.startActivity(discoverableIntent); //does it
+        
         return true;
     }
 }
