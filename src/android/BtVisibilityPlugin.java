@@ -109,7 +109,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
         // filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
         // filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
         // registerReceiver(mReceiver, filter);
-	LOG.d("Topic" , "Message says that this is run!!!");
+	Log.d("Topic" , "Message says that this is run!!!");
         ba.startDiscovery();
 
 
