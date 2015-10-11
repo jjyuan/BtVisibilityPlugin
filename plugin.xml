@@ -23,6 +23,9 @@
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.BLUETOOTH" />
+
+      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     </config-file>
 
     <source-file src="src/android/BtVisibilityPlugin.java" target-dir="src/com/badrit/MacAddress/" />
