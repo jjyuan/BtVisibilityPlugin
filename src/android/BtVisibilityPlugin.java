@@ -29,11 +29,11 @@ import android.os.Bundle;
  * The Class MacAddressPlugin.
  */
 public class BtVisibilityPlugin extends CordovaPlugin {
-    Context context;
-    public BtVisibilityPlugin(Context c)
-    {
-        this.context = c;
-    }
+    // Context context;
+    // public BtVisibilityPlugin(Context c)
+    // {
+    //     this.context = c;
+    // }
 
 //  public boolean isSynch(String action) {
     //     if (action.equals("getMacAddress")) {
@@ -81,10 +81,22 @@ public class BtVisibilityPlugin extends CordovaPlugin {
 
 
     private boolean enableBtVisibility( ) {
-        Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE); //request user to turn on
-        discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180); //extends it
-        Context.startActivity(discoverableIntent); //does it
+        // Context oContext = mContext;
+
+        // BluetoothAdapter ba =  BluetoothAdapter.getDefaultAdapter();
+        // Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE); //request user to turn on
+        // discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180); //extends it
+        // Context.startActivity(discoverableIntent); //does it
         
+        // if(D) Log.d(TAG, "ensure discoverable");
+         BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
+            if (ba.getScanMode() !=
+                    ba.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
+                Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+                startActivity(discoverableIntent);
+            }
+
         return true;
     }
 }
