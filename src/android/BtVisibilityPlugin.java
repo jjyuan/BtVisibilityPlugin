@@ -29,8 +29,13 @@ import android.os.Bundle;
  * The Class MacAddressPlugin.
  */
 public class BtVisibilityPlugin extends CordovaPlugin {
+    Context context;
+    public BtVisibilityPlugin(Context c)
+    {
+        this.context = c;
+    }
 
-    // public boolean isSynch(String action) {
+//  public boolean isSynch(String action) {
     //     if (action.equals("getMacAddress")) {
     //         return true;
     //     }
@@ -78,7 +83,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
     private boolean enableBtVisibility( ) {
         Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE); //request user to turn on
         discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180); //extends it
-        this.startActivity(discoverableIntent); //does it
+        this.context.startActivity(discoverableIntent); //does it
         
         return true;
     }
