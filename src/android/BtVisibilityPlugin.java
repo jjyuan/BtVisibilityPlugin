@@ -84,7 +84,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
     // }
 
 
-    private boolean enableBtVisibility( ) {
+    private void enableBtVisibility( ) {
         // Context oContext = mContext;
 
         // // BluetoothAdapter ba =  BluetoothAdapter.getDefaultAdapter();
