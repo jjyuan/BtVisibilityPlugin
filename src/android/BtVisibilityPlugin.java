@@ -5,7 +5,7 @@ package com.joshy.BtVisibility.BtVisibilityPlugin;
 
 
 
-import org.apache.cordova.CallbackContext;
+//import org.apache.cordova.CallbackContext;
 
 //import org.apache.cordova.PluginResult;
 //import org.json.JSONArray;
@@ -39,7 +39,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
 	
 private static final String ACTION_REQUEST_DISCOVERABLE =   "requestDiscoverable";
 private final int REQUEST_CODE_DISCOVERABLE = 2;
-public CallbackContext callback_discoverable = null;
+//public CallbackContext callback_discoverable = null;
     // Context context;
     // public BtVisibilityPlugin(Context c)
     // {
@@ -103,7 +103,7 @@ public CallbackContext callback_discoverable = null;
         BluetoothAdapter ba = BluetoothAdapter.getDefaultAdapter();
 	Log.d("Topic" , "Message says that this is run!!!");
 	System.out.println("asdasdasda");
-	this.callback_discoverable = callbackContext;
+	//this.callback_discoverable = callbackContext;
             Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
             intent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 180);
             this.cordova.startActivityForResult(
