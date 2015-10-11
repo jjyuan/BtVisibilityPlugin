@@ -6,12 +6,13 @@ package com.joshy.BtVisibility.BtVisibilityPlugin;
 
 
 /*import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
+
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 */
+import org.apache.cordova.CordovaPlugin;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;

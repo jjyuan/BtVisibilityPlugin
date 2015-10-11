@@ -6,12 +6,13 @@ package com.joshy.BtVisibility.BtVisibilityPlugin;
 
 
 /*import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
+
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 */
+import org.apache.cordova.CordovaPlugin;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
@@ -109,7 +110,7 @@ public class BtVisibilityPlugin extends CordovaPlugin {
         // filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
         // filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
         // registerReceiver(mReceiver, filter);
-	LOG.d("Topic" , "Message says that this is run!!!");
+	Log.d("Topic" , "Message says that this is run!!!");
         ba.startDiscovery();
 
 
