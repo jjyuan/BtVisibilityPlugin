@@ -3,6 +3,9 @@
 */
 package com.joshy.BtVisibility.BtVisibilityPlugin;
 
+
+import android.support.v7.app.AppCompatActivity;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
@@ -16,6 +19,7 @@ import android.net.wifi.WifiManager;
 import android.bluetooth.BluetoothAdapter;
 import android.util.Log;
 import android.content.Intent;
+import android.app.Activity;
 
 /**
  * The Class MacAddressPlugin.
