@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  id="com-badrit-macaddress"
+  id="com.joshy.BtVisibility.BtVisibilityPlugin"
   version="0.2.0">
   <name>Bluetooth visibility plug in</name>
   <description>Cordova Bluetooth Visibility Plugin</description>
@@ -28,7 +28,7 @@
 
     </config-file>
 
-    <source-file src="src/android/BluetoothPlugin.java" target-dir="src/com/badrit/MacAddress/" />
+    <source-file src="src/android/BtVisibilityPlugin.java" target-dir="src/com/badrit/MacAddress/" />
   </platform>
 
   <!-- ios -->
